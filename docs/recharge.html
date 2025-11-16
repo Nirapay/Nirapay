@@ -195,7 +195,20 @@
     <!-- Phone Number -->
     <div class="form-column" style="flex:70%;">
       <label for="phone" class="sub-heading-regular">Enter Phone Number</label>
-      <input class="text-field w-input" maxlength="15" name="phone" type="tel" id="phone" required>
+<!--      <input class="text-field w-input" maxlength="15" name="phone" type="tel" id="phone" required>-->
+<input class="text-field w-input" 
+       maxlength="10" 
+       minlength="10" 
+       pattern="[0-9]{10}" 
+       name="phone" 
+       type="tel" 
+       id="phone" 
+       required
+       oninvalid="this.setCustomValidity('Please enter a valid 10-digit mobile number')"
+       oninput="this.setCustomValidity('')">
+
+
+
     </div>
 
     <!-- Operator -->
